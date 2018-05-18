@@ -1,0 +1,4 @@
+
+donet pack  --no-build --output nupkgs
+
+dotnet nuget push nupkgs\SixMan.UIAbstract.1.0.1.nupkg -k oy2au36ybei6poaq77hq77hearxhaj6uhiy5ydx6jq43ya -s https://www.nuget.org

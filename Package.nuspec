@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SixMan.UIAbstract</id>
+    <version>1.0.0</version>
+    <authors>DuoLin.Shen</authors>
+    <owners>DuoLin.Shen</owners>
+    <licenseUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</licenseUrl>
+    <projectUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</projectUrl>
+    <iconUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>界面抽象 例如lookup</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Lookup Combobox</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>

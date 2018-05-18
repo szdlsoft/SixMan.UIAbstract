@@ -2,6 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>duolin.shen</Authors>
+    <Company>SixMan</Company>
+    <PackageLicenseUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</PackageIconUrl>
+    <RepositoryUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</RepositoryUrl>
+    <PackageTags>Lookup Combobox</PackageTags>
+    <Description>界面元素的抽象，例如lookup, combobox</Description>
+    <AssemblyVersion>1.0.1.1</AssemblyVersion>
+    <FileVersion>1.0.1.1</FileVersion>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>
