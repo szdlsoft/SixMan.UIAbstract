@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.UIAbstract", "SixMan
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tool", "tool", "{76B1956E-DA72-41F7-BA2B-0BAB02AB40C8}"
 	ProjectSection(SolutionItems) = preProject
+		bower.json = bower.json
 		publish.txt = publish.txt
+		Release.txt = Release.txt
 	EndProjectSection
 EndProject
 Global
