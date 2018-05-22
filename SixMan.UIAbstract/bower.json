@@ -1,0 +1,22 @@
+{
+  "name": "SixMan.UIAbstract",
+  "homepage": "https://github.com/szdlsoft/SixMan.UIAbstract",
+  "authors": [
+    "szdlsoft <szdlsoft@126.com>"
+  ],
+  "description": "使用abp后台服务，使用easyui前端框架，简单的crud",
+  "main": "js/abpEasyuiSimpleCrud.js",
+  "keywords": [
+    "abp",
+    "easyui",
+    "crud"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
