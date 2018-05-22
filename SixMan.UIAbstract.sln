@@ -12,6 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tool", "tool", "{76B1956E-D
 		Release.txt = Release.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{9289312E-0B84-4686-AA22-D862BB8CF9A7}"
+	ProjectSection(SolutionItems) = preProject
+		js\abpEasyuiSimpleCrud.js = js\abpEasyuiSimpleCrud.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -5,7 +5,7 @@
     "szdlsoft <szdlsoft@126.com>"
   ],
   "description": "使用abp后台服务，使用easyui前端框架，简单的crud",
-  "main": "SixMan.UIAbstract/js/abpEasyuiSimpleCrud.js",
+  "main": "js/abpEasyuiSimpleCrud.js",
   "keywords": [
     "abp",
     "easyui",
@@ -16,9 +16,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "SixMan.UIAbstract",
     "test",
-    "tests",
-    "Lookup",
-    "nupkgs"
+    "tests"
   ]
 }
