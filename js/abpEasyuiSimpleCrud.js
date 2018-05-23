@@ -6,7 +6,7 @@
 // 使用举例：
 //window.crud = new AbpEasyuiSimpleCrud({
 //    appService: abp.services.app.foodMaterialCategory,//ABP后台服务代理
-//    entityName: "食材分类",//实体名
+//    entityName: "实体名",//实体名
 //    listGrid: $("#listGrid"),
 //    editDialog: $("#dlg"),
 //    editForm: $("#fm")
@@ -26,10 +26,15 @@ AbpEasyuiSimpleCrud.prototype.reload =function () {
 
 
 AbpEasyuiSimpleCrud.prototype.create = function () {
-    this.currentEntity = null;
-
-    this.editDialog.dialog('open').dialog('center').dialog('setTitle', _S('添加'));
-    this.editForm.form('clear');
+    var self = this;
+    abp.ui.setBusy(self.listGrid);
+    self.appService.initCreate().done(function (data) {
+        self.currentEntity = data;
+        self.editDialog.dialog('open').dialog('center').dialog('setTitle', _S('添加'));
+        self.editForm.form('load', self.currentEntity);
+    }).always(function () {
+        abp.ui.clearBusy(self.listGrid);
+    });
 }
 
 AbpEasyuiSimpleCrud.prototype.edit = function () {
@@ -93,49 +98,9 @@ AbpEasyuiSimpleCrud.prototype.del = function() {
     }
 }
 
-function filterData(data) {
-    if (data.result) {
-        return data.result;
-    }
-    else
-        if (data.items) {
-            return data.items;
-        }
-        else {
-            return data;
-        }
-}
-
-function imgFormater(imgFile) {
-    return "<img style='width:24px;height:24px;' border='1' src='" + imgFile + "'/>";
-}
-
-function initForm() {
-    $('.easyui-datebox').datebox({
-        formatter: function (date) {
-            if (date) {
-                return new Date(date).Format("yyyy-MM-dd");
-            }
-            return date;
-        },
-        parser: function (s) {
-            var t = Date.parse(s);
-            if (!isNaN(t)) {
-                return new Date(t);
-            } else {
-                return new Date();
-            }
-        }
-    });
-}
 
 AbpEasyuiSimpleCrud.prototype.initListDataGrid = function (options) {
     var self = this; //在事件中使用
-    //var appService = this.appService;
-    //var edit = this.edit;
-    //var create = this.create;
-    //var del = this.del;
-
     this.listGrid.datagrid(
      $.extend(true,{
         singleSelect: true,
@@ -206,6 +171,8 @@ AbpEasyuiSimpleCrud.prototype.initListDataGrid = function (options) {
     }, options));
 }
 
+//公共使用函数
+
 function initCombobox( inputElementName, lookupService ) {
     $(inputElementName).combobox({
         valueField: 'id',
@@ -220,6 +187,43 @@ function initCombobox( inputElementName, lookupService ) {
                 });
         },
 
+    });
+}
+
+
+function filterData(data) {
+    if (data.result) {
+        return data.result;
+    }
+    else
+        if (data.items) {
+            return data.items;
+        }
+        else {
+            return data;
+        }
+}
+
+function imgFormater(imgFile) {
+    return "<img style='width:24px;height:24px;' border='1' src='" + imgFile + "'/>";
+}
+
+function initForm() {
+    $('.easyui-datebox').datebox({
+        formatter: function (date) {
+            if (date) {
+                return new Date(date).Format("yyyy-MM-dd");
+            }
+            return date;
+        },
+        parser: function (s) {
+            var t = Date.parse(s);
+            if (!isNaN(t)) {
+                return new Date(t);
+            } else {
+                return new Date();
+            }
+        }
     });
 }
 
