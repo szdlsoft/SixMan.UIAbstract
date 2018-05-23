@@ -30,7 +30,7 @@ AbpEasyuiSimpleCrud.prototype.create = function () {
     abp.ui.setBusy(self.listGrid);
     self.appService.initCreate().done(function (data) {
         self.currentEntity = data;
-        self.editDialog.dialog('open').dialog('center').dialog('setTitle', _S('添加'));
+        self.editDialog.dialog('open').dialog('center').dialog('setTitle', self._S('添加'));
         self.editForm.form('load', self.currentEntity);
     }).always(function () {
         abp.ui.clearBusy(self.listGrid);
@@ -74,24 +74,26 @@ AbpEasyuiSimpleCrud.prototype.save = function () {
 }
 
 AbpEasyuiSimpleCrud.prototype.doDelete = function (row) {
+    var self = this;
     abp.ui.setBusy(this.listGrid);
     this.appService.delete(row).done(function () {
-        reload();
+        self.reload();
     }).always(function () {
         abp.ui.clearBusy(this.listGrid);
     });
 }
 
-AbpEasyuiSimpleCrud.prototype.del = function() {
-    var row = this.listGrid.datagrid('getSelected');
+AbpEasyuiSimpleCrud.prototype.del = function () {
+    var self = this;
 
+    var row = this.listGrid.datagrid('getSelected');
     if (row) {
         abp.message.confirm(
-            _S('删除'),
+            self._S('删除'),
             '请确认?',
             function (isConfirmed) {
                 if (isConfirmed) {
-                    doDelete(row);
+                    self.doDelete(row);
                 }
             }
         );
