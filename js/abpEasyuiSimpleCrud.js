@@ -43,7 +43,8 @@ AbpEasyuiSimpleCrud.prototype.edit = function () {
 
 AbpEasyuiSimpleCrud.prototype.save = function () {
     var self = this;
-    var _$form = $('form[name=editForm]');
+    //var _$form = $('form[name=editForm]');
+    var _$form = self.editForm;
 
     if (!_$form.valid()) {
         return;
