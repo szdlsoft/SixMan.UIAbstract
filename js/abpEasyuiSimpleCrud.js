@@ -37,8 +37,8 @@ AbpEasyuiSimpleCrud.prototype.create = function () {
     });
 }
 
-AbpEasyuiSimpleCrud.prototype.edit = function () {
-    var row = this.listGrid.datagrid('getSelected');
+AbpEasyuiSimpleCrud.prototype.edit = function (row) {
+    //var row = this.listGrid.datagrid('getSelected');
     if (row) {
         this.currentEntity = row;
         this.editDialog.dialog('open').dialog('center').dialog('setTitle', this._S('编辑'));
@@ -56,10 +56,15 @@ AbpEasyuiSimpleCrud.prototype.save = function () {
     }
 
     var entity = _$form.serializeFormToObject(); //serializeFormToObject is defined in main.js
+    if ( self.onSerialized ) {
+        self.onSerialized( entity );
+    }
 
     if ( this.currentEntity ) {
         entity = $.extend(true, this.currentEntity, entity);
     }
+
+    console.log( entity );
 
     abp.ui.setBusy(_$form);
 
@@ -138,6 +143,9 @@ AbpEasyuiSimpleCrud.prototype.initListDataGrid = function (options) {
                     success(data);
                 });
         },
+        onClickRow: function (index, row) {
+            self.edit(row);
+        },
 
         toolbar: [
             {
@@ -151,7 +159,8 @@ AbpEasyuiSimpleCrud.prototype.initListDataGrid = function (options) {
                 iconCls: 'icon-edit',
                 text: '编辑',
                 handler: function () {
-                    self.edit();
+                    var row = self.listGrid.datagrid('getSelected');
+                    self.edit(row);
                 }
             },
             {
@@ -228,6 +237,7 @@ function initForm() {
         }
     });
 }
+
 
 
 
