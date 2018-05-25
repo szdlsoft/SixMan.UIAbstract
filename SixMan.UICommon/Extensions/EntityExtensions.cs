@@ -13,7 +13,7 @@ namespace SixMan.UICommon.Extensions
         /// <typeparam name="T"></typeparam>
         /// <param name="entity"></param>
         /// <returns></returns>
-        private static string GetText(this IId entity, Func<IId, string> textFactory = null )
+        public static string GetText(this IId entity, Func<IId, string> textFactory = null )
         {
             if( textFactory != null )
             {
@@ -35,9 +35,9 @@ namespace SixMan.UICommon.Extensions
             return entity.ToString();
         }
 
-        public static LookUpItem ToLookupItem( this IId entity )
+        public static LookUpItem ToLookupItem( this IId entity, Func<IId, string> textFactory = null)
         {
-            return new LookUpItem( entity.Id, entity.GetText());
+            return new LookUpItem( entity.Id, entity.GetText(textFactory));
         }
     }
 }

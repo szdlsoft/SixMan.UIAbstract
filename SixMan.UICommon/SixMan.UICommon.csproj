@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>用于.netcore 和 .net4.6的公用ui库, 提供enum 转ui, 支持easyui</Description>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <PackageLicenseUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</PackageProjectUrl>
     <PackageIconUrl>https://github.com/szdlsoft/SixMan.UIAbstract.git</PackageIconUrl>

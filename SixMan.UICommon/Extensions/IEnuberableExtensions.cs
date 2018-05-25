@@ -13,5 +13,13 @@ namespace SixMan.UICommon.Extensions
             return astring.Substring(1, astring.Length - 1); //去掉头部,
         }
 
+        public static void Map<T>(this IEnumerable<T> source, Action<T> action)
+        {
+            foreach (var item in source)
+            {
+                action(item);
+            }
+        }
+
     }
 }
