@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SixMan.UIAbstract.Lookup
+namespace SixMan.UICommon.Lookup
 {
     /// <summary>
     /// 查找项目

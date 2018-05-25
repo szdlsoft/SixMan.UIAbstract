@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{9289312E-0B84-
 		js\abpEasyuiSimpleCrud.js = js\abpEasyuiSimpleCrud.js
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixMan.UICommon", "SixMan.UICommon\SixMan.UICommon.csproj", "{E891CF3D-D255-4B32-8CE1-B64F86117246}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{611B3C3D-52C2-4BC3-8D79-80F43284B540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611B3C3D-52C2-4BC3-8D79-80F43284B540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611B3C3D-52C2-4BC3-8D79-80F43284B540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E891CF3D-D255-4B32-8CE1-B64F86117246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E891CF3D-D255-4B32-8CE1-B64F86117246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E891CF3D-D255-4B32-8CE1-B64F86117246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E891CF3D-D255-4B32-8CE1-B64F86117246}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
